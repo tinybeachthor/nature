@@ -1,0 +1,9 @@
+[shell]
+name = "shell"
+relPath = ""
+subsystem = "python"
+translator = "pip"
+
+[shell.subsystemInfo]
+pythonAttr = "python3"
+pythonVersion = "3.10"
