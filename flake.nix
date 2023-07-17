@@ -20,6 +20,20 @@
         ];
       };
     in {
+      packages = rec {
+        nature = pkgs.rustPlatform.buildRustPackage {
+          name = "nature";
+          src = ./.;
+          cargoLock = {
+            lockFile = ./Cargo.lock;
+          };
+          propagatedBuildInputs = with pkgs; [
+            git
+            nix
+          ];
+        };
+        default = nature;
+      };
       devShells.default = pkgs.mkShell {
         buildInputs = with pkgs; [
           git

@@ -6,4 +6,5 @@ with open("requirements.txt", "r") as file:
 setup(name='shell',
       install_requires=requires,
       zip_safe=False,
+      include_package_data=True,
       )
